@@ -12,7 +12,7 @@ def set_browser_size():
 def browser_management():
     browser.config.base_url = 'https://demoqa.com/automation-practice-form/'
     driver_options = webdriver.ChromeOptions()
-    driver_options.add_argument('--headless=new')
+    #driver_options.add_argument('--headless=new')
     browser.config.driver_options = driver_options
 
     yield
