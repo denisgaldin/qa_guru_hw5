@@ -24,9 +24,7 @@ def test_fill_in_practice_form(browser_management):
     browser.element('.subjects-auto-complete__menu-list').element('//*[text()="Arts"]').perform(
         command.js.scroll_into_view).click()
     browser.element('//label[text()="Sports"]').click()
-    browser.element('#uploadPicture').set_value(
-        path.abspath(path.join('/Users/denisgaldin/Desktop/image.jpg'))
-    )
+    browser.element('#uploadPicture').set_value(path.abspath(path.join('/Users/denisgaldin/Desktop/image.jpg')))
     browser.element('#currentAddress').type('9153 Jerry Dr, Juneau, Alaska 99801, USA')
     browser.element('#state').click()
     browser.element('//*[text()="Uttar Pradesh"]').click()
@@ -43,7 +41,7 @@ def test_fill_in_practice_form(browser_management):
     browser.element('//table//td[text()="Student Email"]/../td[2]').should(have.exact_text('testqa_qa@mail.ru'))
     browser.element('//table//td[text()="Gender"]/../td[2]').should(have.exact_text('Male'))
     browser.element('//table//td[text()="Mobile"]/../td[2]').should(have.exact_text('9009009000'))
-    browser.element('//table//td[text()="Date of Birth"]/../td[2]').should(have.exact_text('27 September, 1997'))
+    browser.element('//table//td[text()="Date of Birth"]/../td[2]').should(have.exact_text('27 September,1997'))
     browser.element('//table//td[text()="Subjects"]/../td[2]').should(have.exact_text('English, Arts'))
     browser.element('//table//td[text()="Hobbies"]/../td[2]').should(have.exact_text('Sports'))
     browser.element('//table//td[text()="Picture"]/../td[2]').should(have.exact_text('image.jpg'))
