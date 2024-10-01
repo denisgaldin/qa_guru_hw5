@@ -24,7 +24,7 @@ def test_practice_form(browser_management):
     browser.element('.subjects-auto-complete__menu-list').element('//*[text()="Arts"]').perform(
         command.js.scroll_into_view).click()
     browser.element('//label[text()="Sports"]').click()
-    browser.element('#uploadPicture').set_value(path.abspath(path.join('../image/pic.jpg')))
+    browser.element('#uploadPicture').set_value(path.abspath(path.join('pic.jpg')))
     browser.element('#currentAddress').type('9153 Jerry Dr, Juneau, Alaska 99801, USA')
     browser.element('#state').click()
     browser.element('//*[text()="Uttar Pradesh"]').click()
