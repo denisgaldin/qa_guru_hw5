@@ -2,7 +2,7 @@ from os import path
 from selene import be, browser, command, have
 
 
-def test_fill_in_practice_form(browser_management):
+def test_practice_form(browser_management):
     browser.open('automation-practice-form')
     browser.driver.execute_script("$('#fixedban').remove()")
     browser.driver.execute_script("$('footer').remove()")
