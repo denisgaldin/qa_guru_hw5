@@ -14,9 +14,7 @@ def browser_management():
     driver_options = webdriver.ChromeOptions()
     # driver_options.add_argument('--headless=new')
     driver_options.page_load_strategy = 'eager'
-
     browser.config.driver_options = driver_options
-    browser.open('https://demoqa.com/automation-practice-form')
 
     yield
 
