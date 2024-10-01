@@ -2,7 +2,7 @@ from selene import browser, have, be
 
 
 def test_demo_qa():
-    browser.open("")
+    browser.open("'/automation-practice-form/")
     browser.element('#firstName').type('Denis')
     browser.element('#lastName').type('Galdin')
     browser.element('#userEmail').type('testqa_mail@yahoo.com')
