@@ -14,7 +14,7 @@ def test_demo_qa():
     browser.element("//div[contains(@class, 'react-datepicker__year')]//div[contains(text(), '1997')]").click()
     browser.element("#subjectsInput").type('Endi')
     browser.element("//label[text()='Sports']").click()
-    browser.element('element').perform(command.js.drop_file(os.path.abspath('C:\Desktop\картинки')))
+    browser.element('element').perform(command.js.drop_file(os.path.abspath('C:\Desktop\картинки\pic.jpg')))
 
     browser.element('#currentAddress').type('9153 Jerry Dr, Juneau, Alaska 99801, USA')
     browser.element('#state').click()
