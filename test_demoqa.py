@@ -1,12 +1,16 @@
 from selene import browser, have
 import os
 
+
 def test_demo_qa():
-    browser.open('automation-practice-form/')
+    browser.open('automation-practice-form')
+    browser.driver.execute_script("$('#fixedban').remove()")
+    browser.driver.execute_script("$('footer').remove()")
+
     browser.element('#firstName').type('Denis')
     browser.element('#lastName').type('Galdin')
     browser.element('#userEmail').type('testqa_mail@yahoo.com')
-    browser.element('[value="Male"]').click()
+    browser.all('#genterWrapper').element_by(have.attribute('value' 'Male')).element('/label').click()
     browser.element('#userNumber').type('+79009009000')
     browser.element("#dateOfBirthInput").click()
     browser.element("//div[contains(@class, 'react-datepicker__month')]//div[contains(text(), '27')]").click()
